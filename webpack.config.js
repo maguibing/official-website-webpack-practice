@@ -12,12 +12,23 @@ module.exports = {
     print: './src/print.js',
   },
 
+  // 生产环境不建议使用
   devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
+
+  // optimization 优化 因为在这个示例中单个 HTML 页面有多个入口，所以添加了 optimization.runtimeChunk: 'single' 配置。
+  optimization: {
+    // 运行时代码块："仅有一个的"
+    runtimeChunk: 'single',
+  },
 
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/',
   },
 
   plugins: [
