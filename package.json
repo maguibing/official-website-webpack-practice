@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "csv-loader": "^3.0.3",
     "file-loader": "^6.2.0",
